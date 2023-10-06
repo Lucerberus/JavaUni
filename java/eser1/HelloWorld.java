@@ -1,3 +1,4 @@
+//esercizio 1: consiste nel creare il file HelloWord e stampare hello world
 package eser1;
 
 public class HelloWorld {
@@ -6,3 +7,4 @@ public class HelloWorld {
     }
     
 }
+//esercizio 1: consiste nel creare il file HelloWord e stampare hello world

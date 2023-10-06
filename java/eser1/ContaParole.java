@@ -1,3 +1,4 @@
+//ese6: se ci sono parole uguali di seguito
 package eser1;
 
 public class ContaParole {

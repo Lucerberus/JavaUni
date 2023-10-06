@@ -1,3 +1,4 @@
+//ese5: consiste nel creare un programma che riceve input tramite gli argomenti d'avvio, conta quanti sono, e stampa quelli pari
 package eser1;
 
 public class Contatore {
