@@ -1,2 +1,3 @@
 # JavaUni
- Codice java per corso di Programmazione  9cfu
+Possibili soluzione delle esercitazioni e altro.
+Programmazione 9cfu con 	MARCO LA CASCIA (java)
