@@ -1,5 +1,5 @@
-package eser2.quadrato;
-//fun fact stesso codice tramite IDE funziona ma senza no, da errore del tipo: cannot find symbol
+package eser2.quadrato;//levare per eseguirlo nel terminale
+
 public class TestQuadrato {
     public static void main(String[] args)
     {
