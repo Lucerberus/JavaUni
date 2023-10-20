@@ -5,10 +5,12 @@ public class calcolatrice {
         int a=5, b=3;
         float r1=(float)a/(float)b;
         System.out.println("5/3="+r1);
+
         char c='a';
         short s=5000;
         int r2=c*s;
         System.out.println("'a'*5000="+r2);
+        
         int i=6;
         float f=3.14F;
         float r3 = i+f;
