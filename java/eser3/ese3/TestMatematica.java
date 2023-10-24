@@ -1,4 +1,4 @@
-//package eser3.ese3; // è commentato perche con il terminale mi da errore, pero se si fa con un IDE funziona bene
+package eser3.ese3; // è commentato perche con il terminale mi da errore, pero se si fa con un IDE funziona bene
 
 public class TestMatematica {
     public static void main(String[] args)
