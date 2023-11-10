@@ -1,4 +1,4 @@
-package eser4.ese2;
+package eser4.ese4;
 
 public class Persona {
     public String Nome;

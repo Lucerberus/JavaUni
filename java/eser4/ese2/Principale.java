@@ -17,6 +17,11 @@ public class Principale {
         {
             System.out.println(i.toString());
         }
+        System.out.println((Lista.get(1)).getCognome());
+        Lista.remove(2);
+        System.out.println("la grandezza della lista dopo la rimozione di un elemento:"+Lista.size());
+        Lista.clear();
+        System.out.println("la grandezza della lista dopo aver eseguito il clear:"+Lista.size());
     }
     
 }
