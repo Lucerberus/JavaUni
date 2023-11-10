@@ -27,7 +27,7 @@ public class Punto {
         this.y=y;
     }
 
-    public String toSring()
+    public String toString()
     {
         return "x:"+this.x+" y:"+this.y;
     }
