@@ -1,0 +1,1 @@
+chiede di fare una classe persona con incapsulamento,  che ho già fatto
