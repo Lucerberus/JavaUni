@@ -29,7 +29,6 @@ public class UsoPunto {
         {
             print("hai inserito 2 punti uguali quindi è inutile calcolare la distanza e il punto medio");
         }
-        
         input.close();
     }
     
