@@ -1,4 +1,4 @@
-package eser5.ese2;
+package eser5.ese3;
 
 public class Razionale {
     private int n;
