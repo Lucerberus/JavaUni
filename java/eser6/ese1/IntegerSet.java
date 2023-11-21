@@ -96,7 +96,7 @@ public class IntegerSet {
 
     public String toString()
     {
-        String s="Insime={";
+        String s="Insieme={";
         for(int i=0; i<100; i++)
         {
             if(this.getInt(i))
