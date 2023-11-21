@@ -31,8 +31,8 @@ public class IntegerSetV2{
         vint.remove(pos);
     }
     
-    public IntegerSetV2 unionOfIntegerSet(IntegerSetV2 v2)
-    {
+    public IntegerSetV2 unionOfIntegerSet(IntegerSetV2 v2)//unione, copio elementi del oggetto chiamante
+    {                                                    //poi quelli di v2
         IntegerSetV2 v3= new IntegerSetV2();
         for(int i=0; i<this.getLenght(); i++)
         {
@@ -45,8 +45,8 @@ public class IntegerSetV2{
         return v3;
     }
 
-    public IntegerSetV2 intersectionOfIntegerSet(IntegerSetV2 v2)
-    {
+    public IntegerSetV2 intersectionOfIntegerSet(IntegerSetV2 v2)//intersezione: tratto le liste come se fosse una matrice
+    {                                                           //controllo se 2 elementi sono uguali, e quindi lo aggiungo al nuovo insieme
         IntegerSetV2 v3= new IntegerSetV2();
         for(int i=0; i<this.getLenght(); i++)
         {
@@ -59,7 +59,7 @@ public class IntegerSetV2{
         return v3;
     }
 
-    public String toString()
+    public String toString()//fatto da me
     {
         String s="Insime={";
         for(int i=0; i<this.getLenght(); i++)
@@ -70,7 +70,7 @@ public class IntegerSetV2{
         return s;
     }
 
-    public String toStrings()
+    public String toStrings()//sfruttando il metodo della classe ArrayList
     {
         return vint.toString();
     }
