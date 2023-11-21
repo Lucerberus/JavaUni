@@ -1,6 +1,8 @@
 package eser6.ese2;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class IntegerSetV2{
 
@@ -30,6 +32,15 @@ public class IntegerSetV2{
     {
         vint.remove(pos);
     }
+    private void ChekList() // questo metodo mi permette di verificare se ci sono i doppioni nella lista
+    {
+        Set<Integer> set = new LinkedHashSet<Integer>(this.vint);//creo un insieme hash della lista, 
+        this.vint.clear();                                      //L’hashing è un processo in cui un insieme di dati, un insieme in entrata, 
+                                                               //viene convertito da una funzione in un codice, l’insieme di destinazione. 
+        this.vint.addAll(set);                                // quindi viene creata una chiave per ogni dato e ogni volta che si va a creare questa
+                                                             // chiave va a controllare se esiste gia una, in questo modo si ha un unicita dei dati
+                                                            //svuoto la lista e la riempio con il set di dati
+    }
     
     public IntegerSetV2 unionOfIntegerSet(IntegerSetV2 v2)//unione, copio elementi del oggetto chiamante
     {                                                    //poi quelli di v2
@@ -42,6 +53,7 @@ public class IntegerSetV2{
         {
             v3.insertInt(v2.getInt(i));
         }
+        v3.ChekList();
         return v3;
     }
 
