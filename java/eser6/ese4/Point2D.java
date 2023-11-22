@@ -1,5 +1,5 @@
 package eser6.ese4;
-
+//punto 2D con tutti i metodi necessari, e 3 di comodo per il futuro
 public class Point2D {
     private double x;
     private double y;

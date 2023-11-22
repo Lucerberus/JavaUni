@@ -1,5 +1,5 @@
 package eser6.ese3;
-
+//Classe Filgia di RECTANGLE, length=width 
 public class Square extends Rectangle {
 
     public Square(String color, boolean filled, double width)

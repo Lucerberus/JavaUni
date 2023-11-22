@@ -1,5 +1,5 @@
 package eser6.ese3;
-
+//classe Figlia di SHAPE,aggiunge 1 parametro, radius , Area e Perimetro
 public class Circle extends Shape {
     private double radius;
 

@@ -1,5 +1,5 @@
 package eser6.ese3;
-
+//classe Figlia di Shape, aggiunge 2 parametri, lenght e widht con Area e Perimetro
 public class Rectangle extends Shape {
     private double width;
     private double lenght;

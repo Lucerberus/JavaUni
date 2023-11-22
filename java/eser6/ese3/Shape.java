@@ -1,5 +1,5 @@
 package eser6.ese3;
-
+//classe PADRE con i metodi classici 
 public class Shape {
     private String color;
     private boolean filled;
