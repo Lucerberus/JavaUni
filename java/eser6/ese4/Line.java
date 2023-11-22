@@ -31,18 +31,17 @@ public class Line {
     }
 
     public void setEQ(Point2D p1, Point2D p2)
-    {
-        if(p1.dequals(p2))
+    {   //uso la formula della retta tra 2 punti
+        if(p1.dequals(p2))//se 2 punti sono differenti 
         {
             double x2x1 = p2.getX() - p1.getX();
             double y2y1 = p2.getY() - p1.getY();
             double com= -((p1.getX()*y2y1)/x2x1) +p1.getY();
-            this.eq="y=("+y2y1+"x/"+x2x1+") + ("+com+")";
-            //this.eq="y=("+y2y1+"x/"+x2x1+") - ("+p1.getX()*y2y1+"/"+x2x1+") + "+p1.getY();
-        }else if(p1.equalsX(p2))
+            this.eq="y=("+y2y1+"x/"+x2x1+") + ("+com+")";//combino l'eq
+        }else if(p1.equalsX(p2))//se le x dei due punti sono uguali 
         {
             eq="x="+p1.getX();
-        }else if(p1.equalsY(p1))
+        }else if(p1.equalsY(p1))//se le y dei due punti sono uguali 
         {
             eq = "y="+p1.getY();
         }else
