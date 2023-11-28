@@ -7,7 +7,7 @@ public class Data {
     private int m;
     private int a;
     private String mm;
-    //1) gg aaaa
+    //1) gg aaaa, ho interpretato questo formato male, conto solo fino a 31 giorni, nei prossimi giorni lo modifico(agguinto il 28/11/23)
     public Data(int g, int a)
     {   
         setG(g);
