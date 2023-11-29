@@ -24,12 +24,12 @@ public class GestoreAbb
         if(com)
             Abn.add(n);
         else
-            System.out.println("l'id dell'abbonato non è valido")
+            System.out.println("l'id dell'abbonato non è valido");
     }
     public void add(AbbonatoPremium p)
     {   
         boolean com=true;   
-        for(Abbonato i : Abp)
+        for(AbbonatoPremium i : Abp)
         {
             if(i.getId() == p.getId())
                 com=false;
@@ -37,16 +37,16 @@ public class GestoreAbb
         if(com)
             Abp.add(p);
         else
-            System.out.println("l'id dell'abbonato non è valido")
+            System.out.println("l'id dell'abbonato non è valido");
     }
 
     public double Acquista(double importo, int id)
     {   
-        boolean abpb=true, abnb=true;
-        for(Abbonato i : Abn)
+        boolean abpb=true, abnb=true;//due FLAG che mi permettono di capire in quale lista è presente l'id dell'abbonato
+        for(Abbonato i : Abn)//se lo trovo qui escludo il controllo della lista abbonati premium
         {
             if(i.getId() == id)
-                abpb=false
+                abpb=false;
         } 
         if(abpb)
         {   
@@ -58,20 +58,74 @@ public class GestoreAbb
         }
         if(abnb == false && abpb == false)
         {
-            System.out.println("questo untente non esiste");
+            System.out.println("questo abbonato non esiste");
+            return 0;
         }
         else if(abnb)
-        {
+        {   //aplico lo sconto perl'abbonato comune
             for(Abbonato i : Abn)
             {
                 if(i.getId() == id)
                     {
-                       double sconto = (importo/100)*i.getSconto():
-                       double importo = importo-sconto; 
+                       
+                        double sconto = (importo/100)*i.getSconto();
+                        importo = importo-sconto; 
+                    }
+            }
+        }else if(abpb)
+        {   //aplico lo sconto per abbonato premium
+            for(AbbonatoPremium i : Abp)
+            {
+                if(i.getId() == id)
+                    {  
+                        if(i.ifSconto(importo))
+                        {   //aplico lo sconto + bonus
+                            double sconto = (importo/100)*i.getSconto();
+                            importo = importo-sconto-5;   
+                        }else
+                        {   //aplico lo sconto normale
+                            double sconto = (importo/100)*i.getSconto();
+                            importo = importo-sconto; 
+                        }
+                        
                     }
             }
         }
-
         return importo;
     }
+
+    public Abbonato getAbbonato(int id)
+    {
+        for(Abbonato i : Abn)
+        {
+            if(i.getId() ==  id)
+                return i;
+        }
+        System.out.println("non esiste nessun abbonato con id = "+id);
+        return null;
+    }
+    
+    public AbbonatoPremium getAbbonatoPremium(int id)
+    {   
+        for(AbbonatoPremium i : Abp)
+        {
+            if(i.getId() == id)
+                return i;
+        }
+        System.out.println("non esiste nessun abbonato premium con id = "+id);
+        return null;
+    }
+
+    public int getLengthAN()
+    {
+        return Abn.size();
+    }
+
+    public int getLengthAB()//numero degli abbonati totale
+    {
+        return Abp.size();
+    }
+
+
+
 }

@@ -1,7 +1,7 @@
 package eser7.ese1;
 
 public class AbbonatoPremium extends Abbonato {
-    private int count=0;
+    private double count=0;
     private boolean sc=false;
 
     public AbbonatoPremium(int id, String Nome, String Cognome, int Eta, int sconto)
@@ -10,7 +10,7 @@ public class AbbonatoPremium extends Abbonato {
         sc=false;
     }
 
-    public boolean ifSconto(int spesa)
+    public boolean ifSconto(double spesa)
     {   
         if(count+spesa >= 100)
         {
