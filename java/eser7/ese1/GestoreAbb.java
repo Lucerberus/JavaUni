@@ -58,8 +58,8 @@ public class GestoreAbb
         }
         if(abnb == false && abpb == false)
         {
-            System.out.println("questo abbonato non esiste");
-            return 0;
+            System.out.println("questo abbonato non esiste, riprova ad inserire i dati");
+            return -1;
         }
         else if(abnb)
         {   //aplico lo sconto perl'abbonato comune
@@ -93,7 +93,7 @@ public class GestoreAbb
         }
         return importo;
     }
-
+    //qui ci sono vari metodi che potreberò essere utili
     public Abbonato getAbbonato(int id)
     {
         for(Abbonato i : Abn)
@@ -125,7 +125,67 @@ public class GestoreAbb
     {
         return Abp.size();
     }
+    //metodi che servono puramente per il main
+    public void RemAbbonato(int id)
+    {
+        for(Abbonato i : Abn)
+        {
+            if(i.getId() ==  id)
+            {   
+                Abn.remove(i);
+                break;
+            }
+        }
+    }
 
+    public void RemAbbonatoPremium(int id)
+    {
+        for(AbbonatoPremium i : Abp)
+        {
+            if(i.getId() ==  id)
+            {   
+                Abp.remove(i);
+                break;
+            }
+        }
+    }
+
+    public String getAbbonati()
+    {   
+        String s="ecco gli Abbonati {\n ";
+        for(Abbonato i: Abn)
+        {
+            s=s+i.toString()+"\n";
+        }
+
+        return s+" }";
+    }
+    public String getAbbonatiPremium()
+    {   
+        String s="ecco gli AbbonatiPremium {\n ";
+        for(AbbonatoPremium i: Abp)
+        {
+            s=s+i.toString()+"\n";
+        }
+
+        return s+" }";
+    }
+    // classico to string
+    public String toString()
+    {
+        String s="ecco gli Abbonati {\n ";
+        for(Abbonato i: Abn)
+        {
+            s=s+i.toString()+"\n";
+        }
+        
+        s=s+"\n ecco gli AbbonatiPremium {\n ";
+        for(AbbonatoPremium i: Abp)
+        {
+            s=s+i.toString()+"\n";
+        }
+        return s+" }";
+    }
 
 
 }
