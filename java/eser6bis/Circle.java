@@ -60,9 +60,8 @@ public class Circle extends Shape {
         System.out.println(toString());
     }
 
-    @Override
-    public void scale(double factor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'scale'");
+    public void scale(double factor)
+    {
+        this.radius =this.radius*factor; 
     }
 }
