@@ -1,6 +1,7 @@
 package eser9.ese7;
 import java.lang.ArithmeticException;
-public class Razionale implements Comparable<Razionale> {
+public class Razionale implements Comparable<Razionale> 
+{
     private int n;
     private int d;
 
@@ -51,7 +52,7 @@ public class Razionale implements Comparable<Razionale> {
         double frato1 =  (double) this.n / (double) this.d;
         double frato2 =  (double) r.n / (double) r.d;
         return Double.compare(frato1, frato2);
-    }         
+    }     
 
     //operazioni semplici
     public Razionale Somma(Razionale r)

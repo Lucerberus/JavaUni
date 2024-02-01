@@ -1,38 +1,34 @@
-package eser9.ese4;
-//qui vieni svolto esercizio 4 e 5
+package eser10.ese2;
+
 import java.util.ArrayList;
 import java.util.EmptyStackException;
-//qui la testa della pila è la fine della lista
-public class Stack
+//qui la testa della pila è la testa della lista
+public class Stack<E>
 {
-	private ArrayList<String> list;
+	private ArrayList<E> list;
 	private int maxSize;
 	
 	public Stack(int maxSize)
 	{	
 		this.maxSize=maxSize;
-		list = new ArrayList<String>();
-	}
-	public ArrayList<String> getList()
-	{
-		return list;
+		list = new ArrayList<E>();
 	}
 	
-	public void push(String s)
+	public void push(E s)
 	{	
 		if(isFull())
 			throw new IllegalStateException("Superato il limite dello stack");
 		else
 		{
-			list.add(s);
+			list.add(0, s);
 			System.out.println("elemento aggiunto con successo ");
 		}
 	}
-	public String pop()
+	public E pop()
 	{
 		if(isEmpty())
 			throw new EmptyStackException();
-		String rem = list.remove(list.size()-1);
+		E rem = list.remove(0);
 		System.out.println("elemento rimosso con successo : "+rem);
 		return rem;
 			
@@ -43,18 +39,17 @@ public class Stack
 	}
 	
 	public boolean isFull()
-	{
-		return list.size() == maxSize;
+	{	
+		if(maxSize == 0)
+			return false;
+		else
+			return list.size() == maxSize;
 	}
 	public String toString()
 	{
 		String c = "lista={ ";
-		for(String i : list)
-			c=c+i+" ";
+		for(E i : list)
+			c=c+i.toString()+" ";
 		return c+"}";
-	}
-	public boolean equals(Stack f)
-	{
-		return (this.list).equals(f.list);
 	}
 }	

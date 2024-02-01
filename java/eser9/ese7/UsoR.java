@@ -3,7 +3,6 @@ package eser9.ese7;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class UsoR {
@@ -24,12 +23,26 @@ public class UsoR {
         lista.add(new Razionale(65, 999));
         lista.add(new Razionale(3, 22));
         lista.add(new Razionale(188, 2));
-        System.out.println("\necco la lista prima il sorete");
+        System.out.println("\necco la lista prima il sort");
         for(Razionale i:lista)
         {
             System.out.print(" "+i);
         }
-        System.out.println("\necco la lista dopo il sorete\n\n");
+        System.out.println("\necco la lista dopo il sort");
+
+        Collections.sort(lista);
+        
+        for(Razionale i:lista)
+        {
+            System.out.print(" "+i);
+        }
+
+        System.out.println("\n\necco la lista prima il sort secodno il numeratore");
+        for(Razionale i:lista)
+        {
+            System.out.print(" "+i);
+        }
+        System.out.println("\necco la lista dopo il sort secondo il numeratore");
 
         Collections.sort(lista, new CompNum());
 
@@ -38,6 +51,19 @@ public class UsoR {
             System.out.print(" "+i);
         }
 
+        System.out.println("\n\necco la lista prima il sort secodno il denominatore");
+        for(Razionale i:lista)
+        {
+            System.out.print(" "+i);
+        }
+        System.out.println("\necco la lista dopo il sort secondo il denominatore");
+
+        Collections.sort(lista, new ComDem());
+
+        for(Razionale i:lista)
+        {
+            System.out.print(" "+i);
+        }
         in.close();
     }
     
